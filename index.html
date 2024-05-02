@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Change this to your name-->
+    <meta name="author" content="Devang Asnadia" />
+
+    <title>WEB222 Music App</title>
+    <!-- Classless CSS Stylesheet - https://oxal.org/projects/sakura/ -->
+    <link rel="stylesheet" href="./css/sakura.css" type="text/css" />
+
+    <header>
+      <!-- Change this to your App's info -->
+      <h1>Devang's Favourite Music Artists</h1>
+      <p>Music Library/My Top Three Artists...</p>
+    </header>
+
+    <style>
+      #songs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 40px;
+      }
+      .card {
+        width: 200px;
+        height: 400px;
+        border: 1px solid #000000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 10px;
+        background-color: #cdd86b;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.05); 
+      }
+
+      .card-image {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      .card p {
+        margin-top: 5px;
+        color: #555;
+      }
+
+      .card a {
+        display: block;
+        margin-top: 10px;
+        color: #000000;
+        text-decoration: none;
+      }
+
+      .social-links {
+        margin-top: 10px;
+      }
+
+      .social-link {
+        display: inline-block;
+        margin-right: 10px;
+        color: #000000;
+        text-decoration: none;
+      }
+    </style>
+
+    <nav id="menu">
+      <!-- Dynamically create your menu category buttons here -->
+    </nav>
+
+    <hr />
+
+    <main>
+      <h2 id="selected-artist">
+        <!-- Dynamically update the selected category title -->
+      </h2>
+
+      <div class="social-links">
+      </div>
+
+      <div class="card-container">
+        <!-- Dynamically generated song cards will be placed here -->
+      </div>
+    </main>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
+
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
